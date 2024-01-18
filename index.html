@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boilerplate Code</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // Code goes here
+      function IncValue() {
+        const [count, setCount] = React.useState(0);
+
+        function handleClick() {
+          setCount(count + 1);
+        }
+
+        return (
+          <div>
+            <h3>Increasing value is {count}</h3>
+            <button onClick={handleClick}>Increase value</button>
+          </div>
+        );
+      }
+
+      ReactDOM.createRoot(document.getElementById("root")).render(<IncValue />);
+    </script>
+  </body>
+</html>
